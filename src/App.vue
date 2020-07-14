@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>
+      Controle de gastos
+    </h1>
+    <InputTextField title="Produto" :input="produto"></InputTextField>
+    <InputTextField title="Valor" :input="valor"></InputTextField>
+    <InputTextField title="Lugar" :input="lugar"></InputTextField>
+    <InputTextField title="data" :input="data"></InputTextField>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import InputTextField from 'C:/Users/tiago/Repositories/controle-de-gastos/controle-de-gastos-frontend/src/components/InputTextField.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputTextField
+  },
+  data() {
+    return {
+      produto: '',
+      valor: '',
+      lugar: '',
+      data: ''
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
