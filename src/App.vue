@@ -1,29 +1,38 @@
 <template>
   <div id="app">
     <h1>
-      Controle de gastos
+      Controle de gastos {{ title }}
     </h1>
-    <InputTextField title="Produto" :input="produto"></InputTextField>
-    <InputTextField title="Valor" :input="valor"></InputTextField>
-    <InputTextField title="Lugar" :input="lugar"></InputTextField>
-    <InputTextField title="data" :input="data"></InputTextField>
+    <span>Produto</span><br />
+    <input type="text" v-model="produto"><br />
+    <span>Valor</span><br />
+    <input type="text" v-model="valor"><br />
+    <span>Lugar</span><br />
+    <input type="text" v-model="lugar"><br />
+    <span>Data</span><br />
+    <input type="text" v-model="data"><br />
+    <button v-on:click="onSave()">Salvar</button>
   </div>
 </template>
 
 <script>
-import InputTextField from 'C:/Users/tiago/Repositories/controle-de-gastos/controle-de-gastos-frontend/src/components/InputTextField.vue';
+import {test, getExpense} from './domains/expense/expense.service'
 
 export default {
   name: 'App',
-  components: {
-    InputTextField
-  },
   data() {
     return {
+      title:'',
       produto: '',
       valor: '',
       lugar: '',
       data: ''
+    }
+  },
+  methods: {
+    onSave() {
+      test();
+      getExpense();
     }
   }
 }
