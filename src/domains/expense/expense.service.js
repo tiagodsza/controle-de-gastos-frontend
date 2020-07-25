@@ -1,14 +1,8 @@
 import controle_gastos_api from '../../support/controle_gastos_api'
 
-// function postExpense() {
-//     const dictio = {
-//         name: 'name',
-//         amount: 'amount',
-//         date: '2020-07-16 01:54:10',
-//         place: 'place',
-//       }
-//     return controle_gastos_api.post('/', data = dictio)
-// }
+function postExpense(data) {
+    return controle_gastos_api.post('/', data)
+}
 
 function getExpense() {
     controle_gastos_api.get('/message').then(({data}) => {
@@ -20,4 +14,4 @@ function test() {
     console.log('Teste')
 }
 
-export {getExpense, test};
+export {getExpense, test, postExpense};

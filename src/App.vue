@@ -4,35 +4,36 @@
       Controle de gastos {{ title }}
     </h1>
     <span>Produto</span><br />
-    <input type="text" v-model="produto"><br />
+    <input type="text" v-model="expense.name"><br />
     <span>Valor</span><br />
-    <input type="text" v-model="valor"><br />
+    <input type="text" v-model="expense.amount"><br />
     <span>Lugar</span><br />
-    <input type="text" v-model="lugar"><br />
+    <input type="text" v-model="expense.place"><br />
     <span>Data</span><br />
-    <input type="text" v-model="data"><br />
+    <input type="text" v-model="expense.date"><br />
     <button v-on:click="onSave()">Salvar</button>
   </div>
 </template>
 
 <script>
-import {test, getExpense} from './domains/expense/expense.service'
+import { postExpense} from './domains/expense/expense.service'
 
 export default {
   name: 'App',
   data() {
     return {
-      title:'',
-      produto: '',
-      valor: '',
-      lugar: '',
-      data: ''
+      expense: {
+        name:'',
+        amount: '',
+        place: '',
+        date: ''
+      }
     }
   },
   methods: {
     onSave() {
-      test();
-      getExpense();
+      console.log(this.expense)
+      postExpense(this.expense)
     }
   }
 }
