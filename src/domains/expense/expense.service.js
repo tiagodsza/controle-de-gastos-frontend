@@ -1,13 +1,11 @@
 import controle_gastos_api from '../../support/controle_gastos_api'
 
 function postExpense(data) {
-    return controle_gastos_api.post('/', data)
+    return controle_gastos_api.post('/expenses/', data)
 }
 
 function getExpense() {
-    controle_gastos_api.get('/message').then(({data}) => {
-        console.log(data.message)
-    })
+    return controle_gastos_api.get('/expenses/')
 }
 
 function test() {

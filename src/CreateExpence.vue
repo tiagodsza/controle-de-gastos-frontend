@@ -12,6 +12,7 @@
     <span>Data</span><br />
     <input type="text" v-model="expense.date"><br />
     <button v-on:click="onSave()">Salvar</button>
+     <button v-on:click="getExpenses()">get expensee</button>
   </div>
 </template>
 
@@ -33,7 +34,7 @@ export default {
   methods: {
     onSave() {
       postExpense(this.expense)
-    }
+    },
   }
 }
 </script>
