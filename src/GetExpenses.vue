@@ -4,7 +4,6 @@
         <ul>
             <li v-for="expense of this.expenses" :key=expense.id >
                 Name: {{expense.name}}  Lugar:  {{ expense.place}} Valor:R${{ expense.amount}}
-
             </li>
         </ul>
     </div>
