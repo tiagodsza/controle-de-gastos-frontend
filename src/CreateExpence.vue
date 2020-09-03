@@ -3,8 +3,9 @@
     <h1>
       Controle de gastos
     </h1>
-    <span>Produto</span><br />
-    <input type="text" v-model="expense.name"><br />
+    <InputTextField title="Produto" :input="expense.name"></InputTextField>
+    <!-- <span>Produto</span><br />
+    <input type="text" v-model="expense.name"><br /> -->
     <span>Valor</span><br />
     <input type="text" v-model="expense.amount"><br />
     <span>Lugar</span><br />
@@ -17,8 +18,12 @@
 
 <script>
 import { postExpense} from './domains/expense/expense.service'
+import InputTextField from './components/InputTextField.vue'
 
 export default {
+  components: {
+    InputTextField,
+  },
   name: 'CreateExpense',
   data() {
     return {

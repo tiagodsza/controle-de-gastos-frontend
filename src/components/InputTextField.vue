@@ -14,12 +14,6 @@ export default {
         input: {
             type: String
         }
-    },
-    data() {
-        return {
-            valor: this.input,
-        }
-    }
-    
+    },    
 }
 </script>
