@@ -11,7 +11,7 @@
     </div>
 </template>
 <script>
-import { getExpense } from './domains/expense/expense.service'
+import { getExpense } from '../domains/expense/expense.service'
 
 export default {
     data() {

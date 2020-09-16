@@ -35,4 +35,7 @@ export default {
     #title {
         font-size: 20px;
     }
+    input {
+        width: 100%;
+    }
 </style>
