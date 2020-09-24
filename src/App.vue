@@ -20,4 +20,12 @@ export default {
 }
 </script>
 
+<style >
+  .create_expense{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+
 

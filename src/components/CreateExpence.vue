@@ -1,11 +1,11 @@
 <template>
-  <div id="form">
+  <form id="form">
     <InputTextField class="input-form" title="Produto" v-model="expense.name"></InputTextField>
     <InputTextField class="input-form" title="Valor" v-model="expense.amount"></InputTextField>
     <InputTextField class="input-form" title="Lugar" v-model="expense.place"></InputTextField>
     <InputTextField class="input-form" title="Data" v-model="expense.date"></InputTextField>
     <Button title="Salvar" :onClickFunction="onSave"></Button>
-  </div>
+  </form>
 </template>
 
 <script>

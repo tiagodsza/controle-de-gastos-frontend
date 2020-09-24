@@ -13,6 +13,7 @@
                 <td>{{ expense.place}}</td> 
                 <td>R${{ expense.amount}}</td>
                 <td>{{ expense.date}}</td>
+                <td><img src="../support/images/trash.png" alt=""></td>
             </tr>
         </table>
     </div>
@@ -57,5 +58,10 @@ table, th, td {
 
 table td {
     text-align: center;
+}
+
+img{
+    width: 25px;
+
 }
 </style>
